@@ -16,6 +16,8 @@
 		BB6E71262B4E2A1C00F13459 /* GraftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6E71252B4E2A1C00F13459 /* GraftTests.swift */; };
 		BB6E71302B4E2A1C00F13459 /* GraftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6E712F2B4E2A1C00F13459 /* GraftUITests.swift */; };
 		BB6E71322B4E2A1C00F13459 /* GraftUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6E71312B4E2A1C00F13459 /* GraftUITestsLaunchTests.swift */; };
+		BB6E71412B4E361600F13459 /* GraftTabBarControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6E713F2B4E361600F13459 /* GraftTabBarControllerViewController.swift */; };
+		BB6E71422B4E361600F13459 /* GraftTabBarControllerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB6E71402B4E361600F13459 /* GraftTabBarControllerViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		BB6E712B2B4E2A1C00F13459 /* GraftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GraftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB6E712F2B4E2A1C00F13459 /* GraftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraftUITests.swift; sourceTree = "<group>"; };
 		BB6E71312B4E2A1C00F13459 /* GraftUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraftUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		BB6E713F2B4E361600F13459 /* GraftTabBarControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraftTabBarControllerViewController.swift; sourceTree = "<group>"; };
+		BB6E71402B4E361600F13459 /* GraftTabBarControllerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GraftTabBarControllerViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,7 @@
 		BB6E710D2B4E2A1A00F13459 /* Graft */ = {
 			isa = PBXGroup;
 			children = (
+				BB6E713E2B4E356C00F13459 /* GraftTabBar */,
 				BB6E710E2B4E2A1A00F13459 /* AppDelegate.swift */,
 				BB6E71102B4E2A1A00F13459 /* SceneDelegate.swift */,
 				BB6E71122B4E2A1A00F13459 /* ViewController.swift */,
@@ -125,6 +130,15 @@
 				BB6E71312B4E2A1C00F13459 /* GraftUITestsLaunchTests.swift */,
 			);
 			path = GraftUITests;
+			sourceTree = "<group>";
+		};
+		BB6E713E2B4E356C00F13459 /* GraftTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				BB6E713F2B4E361600F13459 /* GraftTabBarControllerViewController.swift */,
+				BB6E71402B4E361600F13459 /* GraftTabBarControllerViewController.xib */,
+			);
+			path = GraftTabBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +248,7 @@
 				BB6E711B2B4E2A1C00F13459 /* LaunchScreen.storyboard in Resources */,
 				BB6E71182B4E2A1C00F13459 /* Assets.xcassets in Resources */,
 				BB6E71162B4E2A1A00F13459 /* Main.storyboard in Resources */,
+				BB6E71422B4E361600F13459 /* GraftTabBarControllerViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +276,7 @@
 				BB6E71132B4E2A1A00F13459 /* ViewController.swift in Sources */,
 				BB6E710F2B4E2A1A00F13459 /* AppDelegate.swift in Sources */,
 				BB6E71112B4E2A1A00F13459 /* SceneDelegate.swift in Sources */,
+				BB6E71412B4E361600F13459 /* GraftTabBarControllerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
