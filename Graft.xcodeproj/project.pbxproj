@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB2523402B4F4047000E75A5 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB25233E2B4F4047000E75A5 /* OnboardingViewController.swift */; };
+		BB2523412B4F4047000E75A5 /* OnboardingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB25233F2B4F4047000E75A5 /* OnboardingViewController.xib */; };
+		BB2523482B5060A2000E75A5 /* OnboardingAccountTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2523462B5060A2000E75A5 /* OnboardingAccountTypeViewController.swift */; };
+		BB2523492B5060A2000E75A5 /* OnboardingAccountTypeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB2523472B5060A2000E75A5 /* OnboardingAccountTypeViewController.xib */; };
+		BB25234C2B506160000E75A5 /* UserModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB25234B2B506160000E75A5 /* UserModels.swift */; };
+		BB25234E2B518065000E75A5 /* Quicksand in Resources */ = {isa = PBXBuildFile; fileRef = BB25234D2B518065000E75A5 /* Quicksand */; };
 		BB6E710F2B4E2A1A00F13459 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6E710E2B4E2A1A00F13459 /* AppDelegate.swift */; };
 		BB6E71112B4E2A1A00F13459 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6E71102B4E2A1A00F13459 /* SceneDelegate.swift */; };
 		BB6E71132B4E2A1A00F13459 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6E71122B4E2A1A00F13459 /* ViewController.swift */; };
@@ -18,6 +24,15 @@
 		BB6E71322B4E2A1C00F13459 /* GraftUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6E71312B4E2A1C00F13459 /* GraftUITestsLaunchTests.swift */; };
 		BB6E71412B4E361600F13459 /* GraftTabBarControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6E713F2B4E361600F13459 /* GraftTabBarControllerViewController.swift */; };
 		BB6E71422B4E361600F13459 /* GraftTabBarControllerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB6E71402B4E361600F13459 /* GraftTabBarControllerViewController.xib */; };
+		BBC01C1A2B51C5EA006D734B /* OnboardingUserCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC01C182B51C5E9006D734B /* OnboardingUserCreationViewController.swift */; };
+		BBC01C1B2B51C5EA006D734B /* OnboardingUserCreationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBC01C192B51C5E9006D734B /* OnboardingUserCreationViewController.xib */; };
+		BBC01C1E2B51C8B0006D734B /* UserCreationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC01C1C2B51C8B0006D734B /* UserCreationTableViewCell.swift */; };
+		BBC01C1F2B51C8B0006D734B /* UserCreationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBC01C1D2B51C8B0006D734B /* UserCreationTableViewCell.xib */; };
+		BBC01C212B51D15F006D734B /* SocialModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC01C202B51D15F006D734B /* SocialModels.swift */; };
+		BBC01C252B51E4A6006D734B /* UserCreationSwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC01C232B51E4A6006D734B /* UserCreationSwitchTableViewCell.swift */; };
+		BBC01C262B51E4A6006D734B /* UserCreationSwitchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBC01C242B51E4A6006D734B /* UserCreationSwitchTableViewCell.xib */; };
+		BBC01C292B51E4B9006D734B /* UserCreationListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC01C272B51E4B9006D734B /* UserCreationListTableViewCell.swift */; };
+		BBC01C2A2B51E4B9006D734B /* UserCreationListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBC01C282B51E4B9006D734B /* UserCreationListTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +53,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BB25233E2B4F4047000E75A5 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		BB25233F2B4F4047000E75A5 /* OnboardingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingViewController.xib; sourceTree = "<group>"; };
+		BB2523462B5060A2000E75A5 /* OnboardingAccountTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingAccountTypeViewController.swift; sourceTree = "<group>"; };
+		BB2523472B5060A2000E75A5 /* OnboardingAccountTypeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingAccountTypeViewController.xib; sourceTree = "<group>"; };
+		BB25234B2B506160000E75A5 /* UserModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModels.swift; sourceTree = "<group>"; };
+		BB25234D2B518065000E75A5 /* Quicksand */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Quicksand; sourceTree = "<group>"; };
 		BB6E710B2B4E2A1A00F13459 /* Graft.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Graft.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB6E710E2B4E2A1A00F13459 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BB6E71102B4E2A1A00F13459 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +74,15 @@
 		BB6E71312B4E2A1C00F13459 /* GraftUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraftUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		BB6E713F2B4E361600F13459 /* GraftTabBarControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraftTabBarControllerViewController.swift; sourceTree = "<group>"; };
 		BB6E71402B4E361600F13459 /* GraftTabBarControllerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GraftTabBarControllerViewController.xib; sourceTree = "<group>"; };
+		BBC01C182B51C5E9006D734B /* OnboardingUserCreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingUserCreationViewController.swift; sourceTree = "<group>"; };
+		BBC01C192B51C5E9006D734B /* OnboardingUserCreationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingUserCreationViewController.xib; sourceTree = "<group>"; };
+		BBC01C1C2B51C8B0006D734B /* UserCreationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCreationTableViewCell.swift; sourceTree = "<group>"; };
+		BBC01C1D2B51C8B0006D734B /* UserCreationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCreationTableViewCell.xib; sourceTree = "<group>"; };
+		BBC01C202B51D15F006D734B /* SocialModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialModels.swift; sourceTree = "<group>"; };
+		BBC01C232B51E4A6006D734B /* UserCreationSwitchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCreationSwitchTableViewCell.swift; sourceTree = "<group>"; };
+		BBC01C242B51E4A6006D734B /* UserCreationSwitchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCreationSwitchTableViewCell.xib; sourceTree = "<group>"; };
+		BBC01C272B51E4B9006D734B /* UserCreationListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCreationListTableViewCell.swift; sourceTree = "<group>"; };
+		BBC01C282B51E4B9006D734B /* UserCreationListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCreationListTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +110,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BB2523392B4F3D61000E75A5 /* CreateAccount */ = {
+			isa = PBXGroup;
+			children = (
+				BBC01C222B51E48B006D734B /* Cells */,
+				BB25233E2B4F4047000E75A5 /* OnboardingViewController.swift */,
+				BB25233F2B4F4047000E75A5 /* OnboardingViewController.xib */,
+				BB2523462B5060A2000E75A5 /* OnboardingAccountTypeViewController.swift */,
+				BB2523472B5060A2000E75A5 /* OnboardingAccountTypeViewController.xib */,
+				BBC01C182B51C5E9006D734B /* OnboardingUserCreationViewController.swift */,
+				BBC01C192B51C5E9006D734B /* OnboardingUserCreationViewController.xib */,
+			);
+			path = CreateAccount;
+			sourceTree = "<group>";
+		};
+		BB25234A2B506147000E75A5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BB25234B2B506160000E75A5 /* UserModels.swift */,
+				BBC01C202B51D15F006D734B /* SocialModels.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		BB6E71022B4E2A1A00F13459 = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +156,8 @@
 		BB6E710D2B4E2A1A00F13459 /* Graft */ = {
 			isa = PBXGroup;
 			children = (
+				BB25234A2B506147000E75A5 /* Models */,
+				BB2523392B4F3D61000E75A5 /* CreateAccount */,
 				BB6E713E2B4E356C00F13459 /* GraftTabBar */,
 				BB6E710E2B4E2A1A00F13459 /* AppDelegate.swift */,
 				BB6E71102B4E2A1A00F13459 /* SceneDelegate.swift */,
@@ -111,6 +166,7 @@
 				BB6E71172B4E2A1C00F13459 /* Assets.xcassets */,
 				BB6E71192B4E2A1C00F13459 /* LaunchScreen.storyboard */,
 				BB6E711C2B4E2A1C00F13459 /* Info.plist */,
+				BB25234D2B518065000E75A5 /* Quicksand */,
 			);
 			path = Graft;
 			sourceTree = "<group>";
@@ -139,6 +195,19 @@
 				BB6E71402B4E361600F13459 /* GraftTabBarControllerViewController.xib */,
 			);
 			path = GraftTabBar;
+			sourceTree = "<group>";
+		};
+		BBC01C222B51E48B006D734B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				BBC01C1C2B51C8B0006D734B /* UserCreationTableViewCell.swift */,
+				BBC01C1D2B51C8B0006D734B /* UserCreationTableViewCell.xib */,
+				BBC01C232B51E4A6006D734B /* UserCreationSwitchTableViewCell.swift */,
+				BBC01C242B51E4A6006D734B /* UserCreationSwitchTableViewCell.xib */,
+				BBC01C272B51E4B9006D734B /* UserCreationListTableViewCell.swift */,
+				BBC01C282B51E4B9006D734B /* UserCreationListTableViewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -247,8 +316,15 @@
 			files = (
 				BB6E711B2B4E2A1C00F13459 /* LaunchScreen.storyboard in Resources */,
 				BB6E71182B4E2A1C00F13459 /* Assets.xcassets in Resources */,
+				BB2523412B4F4047000E75A5 /* OnboardingViewController.xib in Resources */,
+				BBC01C262B51E4A6006D734B /* UserCreationSwitchTableViewCell.xib in Resources */,
+				BB25234E2B518065000E75A5 /* Quicksand in Resources */,
 				BB6E71162B4E2A1A00F13459 /* Main.storyboard in Resources */,
+				BBC01C1F2B51C8B0006D734B /* UserCreationTableViewCell.xib in Resources */,
 				BB6E71422B4E361600F13459 /* GraftTabBarControllerViewController.xib in Resources */,
+				BB2523492B5060A2000E75A5 /* OnboardingAccountTypeViewController.xib in Resources */,
+				BBC01C2A2B51E4B9006D734B /* UserCreationListTableViewCell.xib in Resources */,
+				BBC01C1B2B51C5EA006D734B /* OnboardingUserCreationViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,9 +349,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBC01C252B51E4A6006D734B /* UserCreationSwitchTableViewCell.swift in Sources */,
 				BB6E71132B4E2A1A00F13459 /* ViewController.swift in Sources */,
+				BB25234C2B506160000E75A5 /* UserModels.swift in Sources */,
+				BB2523482B5060A2000E75A5 /* OnboardingAccountTypeViewController.swift in Sources */,
+				BBC01C1A2B51C5EA006D734B /* OnboardingUserCreationViewController.swift in Sources */,
+				BBC01C292B51E4B9006D734B /* UserCreationListTableViewCell.swift in Sources */,
 				BB6E710F2B4E2A1A00F13459 /* AppDelegate.swift in Sources */,
+				BB2523402B4F4047000E75A5 /* OnboardingViewController.swift in Sources */,
+				BBC01C212B51D15F006D734B /* SocialModels.swift in Sources */,
 				BB6E71112B4E2A1A00F13459 /* SceneDelegate.swift in Sources */,
+				BBC01C1E2B51C8B0006D734B /* UserCreationTableViewCell.swift in Sources */,
 				BB6E71412B4E361600F13459 /* GraftTabBarControllerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
