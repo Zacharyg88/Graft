@@ -7,15 +7,26 @@
 
 import UIKit
 
-class UserCreationTableViewCell: UITableViewCell {
+class UserCreationTableViewCell: UITableViewCell, UITextFieldDelegate {
     
     @IBOutlet weak var textField: UITextField?
+    var delegate: QuestionCellDelegate?
+    var question: OnboardingQuestion? {
+        didSet {
+            textField?.placeholder = question?.questionString
+        }
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        textField?.delegate = self
     }
-
+    
+    
+    @IBAction func textFieldTextDidChange(_ sender: Any) {
+        delegate?.didUpdateAnswer(id: question?.questionID ?? "", boolAnswer: nil, stringAnswer: textField?.text, intAnswer: nil)
+    }
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

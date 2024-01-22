@@ -51,6 +51,7 @@ class OnboardingAccountTypeViewController: UIViewController {
     
     @objc func adoptiveParentSelected() {
         currentAccountType = .AdoptiveParent
+        
     }
     
     @objc func expectantParentSelected() {
@@ -68,7 +69,7 @@ class OnboardingAccountTypeViewController: UIViewController {
     func adjustUIForSelection() {
         var viewsArray: [UIView] = [adoptiveParentView ?? UIView(), expectantParentView ?? UIView(), counselorView ?? UIView(), laywerView ?? UIView()]
         for view in viewsArray {
-            if view.tag == currentAccountType?.hashValue {
+            if view.tag == currentAccountType?.rawValue {
                 view.layer.borderWidth = 2
                 view.layer.borderColor = UIColor(named: "Golden Glow")?.cgColor
             }else {

@@ -11,7 +11,12 @@ class UserCreationSwitchTableViewCell: UITableViewCell {
     
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var questionSwitch: UISwitch!
-    
+    var question: OnboardingQuestion? {
+        didSet {
+            
+        }
+    }
+    var delegate: QuestionCellDelegate?
     var hostVC: OnboardingUserCreationViewController?
 
     override func awakeFromNib() {
@@ -19,10 +24,12 @@ class UserCreationSwitchTableViewCell: UITableViewCell {
         // Initialization code
     }
 
+    @IBAction func didToggleSwitch(_ sender: Any) {
+        delegate?.didUpdateAnswer(id: question?.questionID ?? "", boolAnswer: questionSwitch.isOn, stringAnswer: nil, intAnswer: nil)
+    }
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
     }
     
 }

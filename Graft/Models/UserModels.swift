@@ -61,37 +61,28 @@ struct LegalEntityOptions: Codable {
 }
 
 
-enum AccountType: Codable {
+enum AccountType: Int, Codable {
     case AdoptiveParent
     case ExpectantParent
     case ProfessionalAdvisor
     case LegalCounsel
 }
 
-struct OnboardingQuestions {
-    var adoptiveParentQuestions: [String] = [
-        "Have you competed your homestudy?",
-        "Are you open to out-of-state matches?",
-        "How many other children do you have?",
-        "Have you adopted before?",
-        "If so, how many times?"
-    ]
-    var expectantParentQuestions: [String] = [
-        "Are you seeking pre-natal care?",
-        "Are both expectant parents involved in the adoption plan?",
-        "Are you open to out-of-state matches?",
-        "What level of openness are you looking for?"
-    ]
-    var counselorQuestions: [String] = [
-        "Are you a fully liscensed mental health practicioner?",
-        "Are you open to out-of-state clients?",
-        "Do you have any areas of specialization?",
-        "Are you a religious/spiritual counselor/therapist?"
-    ]
-    var lawyerQuestions: [String] = [
-        "What is the name of the firm you represent?",
-        "Are you open to out-of-state clients?",
-        "What is your retainer fee?",
-        "How many years have you been practicing?"
-    ]
+class OnboardingQuestion: NSObject, Codable {
+    var questionString: String = ""
+    var questionType: String = ""
+    var isPreviousDependent: Bool = false
+    var questionID: String = ""
+}
+
+class AdvancedEntryQuestions: NSObject, Codable {
+    var adoptiveParentQuestions: [OnboardingQuestion] = []
+    var expectantParentQuestions: [OnboardingQuestion] = []
+    var counselorQuestions: [OnboardingQuestion] = []
+    var legalCounselQuestions: [OnboardingQuestion] = []
+}
+
+class OnboardingQuestionResponse: NSObject, Codable {
+    var basicEntryQuestions: [OnboardingQuestion]?
+    var advancedEntryQuestions: AdvancedEntryQuestions?
 }

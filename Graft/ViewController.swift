@@ -55,7 +55,9 @@ class ViewController: UIViewController {
     }
 
     @IBAction func createAccountTapped(_ sender: Any) {
-        
+        var onboardingVC = OnboardingViewController()
+        onboardingVC.modalPresentationStyle = .overFullScreen
+        self.present(OnboardingViewController(), animated: true)
     }
     
 }

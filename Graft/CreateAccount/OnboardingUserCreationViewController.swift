@@ -6,8 +6,9 @@
 //
 
 import UIKit
+var backend = DummyBackend()
 
-class OnboardingUserCreationViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class OnboardingUserCreationViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, QuestionCellDelegate {
 
     @IBOutlet weak var questionsTableView: UITableView?
     
@@ -16,80 +17,94 @@ class OnboardingUserCreationViewController: UIViewController, UITableViewDelegat
     var hasAdoptedBefore: Bool = false
     
     var delegate: OnboardingDelegate?
-    
+    var onboardingQuestions: OnboardingQuestionResponse? {
+        didSet {
+            questionsTableView?.reloadData()
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         questionsTableView?.delegate = self
         questionsTableView?.dataSource = self
         questionsTableView?.register(UINib(nibName: "UserCreationTableViewCell", bundle: nil), forCellReuseIdentifier: "UserCreationTableViewCell")
+        questionsTableView?.register(UINib(nibName: "UserCreationSwitchTableViewCell", bundle: nil), forCellReuseIdentifier: "UserCreationSwitchTableViewCell")
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let type = onboardingUser?.accountType else { return UITableViewCell() }
+        var question: OnboardingQuestion?
         if isBasicGathering {
-            if let cell: UserCreationTableViewCell = tableView.dequeueReusableCell(withIdentifier: "UserCreationTableViewCell", for: indexPath) as? UserCreationTableViewCell {
-                cell.textField?.placeholder = getPlaceholderForBasicEntry(row: indexPath.row)
-                return cell
-            }
+            question = onboardingQuestions?.basicEntryQuestions?[indexPath.row]
         }else {
-            
+            switch onboardingUser?.accountType {
+            case .AdoptiveParent:
+                question = onboardingQuestions?.advancedEntryQuestions?.adoptiveParentQuestions[indexPath.row]
+            case .ExpectantParent:
+                question = onboardingQuestions?.advancedEntryQuestions?.expectantParentQuestions[indexPath.row]
+            case .ProfessionalAdvisor:
+                question = onboardingQuestions?.advancedEntryQuestions?.counselorQuestions[indexPath.row]
+            default:
+                question = onboardingQuestions?.advancedEntryQuestions?.legalCounselQuestions[indexPath.row]
+            }
         }
         
+        let cell = getCellForQuestionType(onboardingQuestion: question ?? OnboardingQuestion(), indexPath: indexPath)
+        return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let type = onboardingUser?.accountType else { return 0 }
         if isBasicGathering {
-            return 7
+            return onboardingQuestions?.basicEntryQuestions?.count ?? 0
         }else {
-            switch type {
+            switch onboardingUser?.accountType {
             case .AdoptiveParent:
-                if hasAdoptedBefore {
-                    return 6
-                }else {
-                    return 5
-                }
+                return onboardingQuestions?.advancedEntryQuestions?.adoptiveParentQuestions.count ?? 0
             case .ExpectantParent:
-                return 5
+                return onboardingQuestions?.advancedEntryQuestions?.expectantParentQuestions.count ?? 0
             case .ProfessionalAdvisor:
-                return 4
+                return onboardingQuestions?.advancedEntryQuestions?.counselorQuestions.count ?? 0
+            case .LegalCounsel:
+                return onboardingQuestions?.advancedEntryQuestions?.legalCounselQuestions.count ?? 0
             default:
-                return 4
+                return 0
             }
         }
     }
     
     
-    
-    func getPlaceholderForBasicEntry(row: Int) -> String {
-        var placeHolders: [String] = [
-            "First Name",
-            "Last Name",
-            "Desired Username",
-            "State of Residence",
-            "Email",
-            "Password",
-            "Confirm Password"
-        ]
-        return placeHolders[row]
+    func getCellForQuestionType(onboardingQuestion: OnboardingQuestion, indexPath: IndexPath) -> UITableViewCell {
+        switch onboardingQuestion.questionType {
+        case "Text":
+            if let cell: UserCreationTableViewCell = self.questionsTableView?.dequeueReusableCell(withIdentifier: "UserCreationTableViewCell", for: indexPath) as? UserCreationTableViewCell {
+                cell.delegate = self
+                
+                return cell
+            }
+        case "Selection":
+            if let cell: UserCreationTableViewCell = self.questionsTableView?.dequeueReusableCell(withIdentifier: "UserCreationTableViewCell", for: indexPath) as? UserCreationTableViewCell {
+                return cell
+            }
+        case "Bool":
+            if let cell: UserCreationSwitchTableViewCell = self.questionsTableView?.dequeueReusableCell(withIdentifier: "UserCreationSwitchTableViewCell", for: indexPath) as? UserCreationSwitchTableViewCell {
+                return cell
+            }
+        case "Int":
+            if let cell: UserCreationTableViewCell = self.questionsTableView?.dequeueReusableCell(withIdentifier: "UserCreationTableViewCell", for: indexPath) as? UserCreationTableViewCell {
+                return cell
+            }
+        default:
+            return UITableViewCell()
+        }
+        return UITableViewCell()
     }
     
-    func getPlaceHolderForAdvancedEntry(row: Int) -> String {
-        var onboardingQuestions = OnboardingQuestions()
-        switch onboardingUser?.accountType {
-        case .AdoptiveParent:
-            return onboardingQuestions.adoptiveParentQuestions[row]
-        case .ExpectantParent:
-            return onboardingQuestions.expectantParentQuestions[row]
-        case .ProfessionalAdvisor:
-            return onboardingQuestions.counselorQuestions[row]
-        case .LegalCounsel:
-            return onboardingQuestions.lawyerQuestions[row]
-        case nil:
-            return ""
-        }
+    func didUpdateAnswer(id: String, boolAnswer: Bool?, stringAnswer: String?, intAnswer: Int?) {
+        print(id, boolAnswer, stringAnswer, intAnswer)
     }
     
     
 
+}
+
+protocol QuestionCellDelegate {
+    func didUpdateAnswer(id: String, boolAnswer: Bool?, stringAnswer: String?, intAnswer: Int?)
 }
