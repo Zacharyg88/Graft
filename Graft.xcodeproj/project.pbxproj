@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		BB222A492B58374A006D5DC4 /* DummyBackend.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB222A482B58374A006D5DC4 /* DummyBackend.swift */; };
 		BB222A4C2B583F63006D5DC4 /* OnboardingQuestionsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB222A4B2B583F63006D5DC4 /* OnboardingQuestionsAPI.swift */; };
+		BB222A512B640B88006D5DC4 /* OnboardingUserCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB222A4F2B640B88006D5DC4 /* OnboardingUserCreationViewController.swift */; };
+		BB222A522B640B88006D5DC4 /* OnboardingUserCreationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB222A502B640B88006D5DC4 /* OnboardingUserCreationViewController.xib */; };
+		BB222A542B641752006D5DC4 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB222A532B641752006D5DC4 /* Extensions.swift */; };
+		BB222A572B642A7E006D5DC4 /* OnboardingUserPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB222A552B642A7E006D5DC4 /* OnboardingUserPasswordViewController.swift */; };
+		BB222A582B642A7E006D5DC4 /* OnboardingUserPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB222A562B642A7E006D5DC4 /* OnboardingUserPasswordViewController.xib */; };
+		BB222A5B2B6434C1006D5DC4 /* OnboardingAdoptiveParentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB222A592B6434C1006D5DC4 /* OnboardingAdoptiveParentViewController.swift */; };
+		BB222A5C2B6434C1006D5DC4 /* OnboardingAdoptiveParentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB222A5A2B6434C1006D5DC4 /* OnboardingAdoptiveParentViewController.xib */; };
 		BB2523402B4F4047000E75A5 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB25233E2B4F4047000E75A5 /* OnboardingViewController.swift */; };
 		BB2523412B4F4047000E75A5 /* OnboardingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB25233F2B4F4047000E75A5 /* OnboardingViewController.xib */; };
 		BB2523482B5060A2000E75A5 /* OnboardingAccountTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2523462B5060A2000E75A5 /* OnboardingAccountTypeViewController.swift */; };
@@ -26,15 +33,7 @@
 		BB6E71322B4E2A1C00F13459 /* GraftUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6E71312B4E2A1C00F13459 /* GraftUITestsLaunchTests.swift */; };
 		BB6E71412B4E361600F13459 /* GraftTabBarControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6E713F2B4E361600F13459 /* GraftTabBarControllerViewController.swift */; };
 		BB6E71422B4E361600F13459 /* GraftTabBarControllerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB6E71402B4E361600F13459 /* GraftTabBarControllerViewController.xib */; };
-		BBC01C1A2B51C5EA006D734B /* OnboardingUserCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC01C182B51C5E9006D734B /* OnboardingUserCreationViewController.swift */; };
-		BBC01C1B2B51C5EA006D734B /* OnboardingUserCreationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBC01C192B51C5E9006D734B /* OnboardingUserCreationViewController.xib */; };
-		BBC01C1E2B51C8B0006D734B /* UserCreationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC01C1C2B51C8B0006D734B /* UserCreationTableViewCell.swift */; };
-		BBC01C1F2B51C8B0006D734B /* UserCreationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBC01C1D2B51C8B0006D734B /* UserCreationTableViewCell.xib */; };
 		BBC01C212B51D15F006D734B /* SocialModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC01C202B51D15F006D734B /* SocialModels.swift */; };
-		BBC01C252B51E4A6006D734B /* UserCreationSwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC01C232B51E4A6006D734B /* UserCreationSwitchTableViewCell.swift */; };
-		BBC01C262B51E4A6006D734B /* UserCreationSwitchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBC01C242B51E4A6006D734B /* UserCreationSwitchTableViewCell.xib */; };
-		BBC01C292B51E4B9006D734B /* UserCreationListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC01C272B51E4B9006D734B /* UserCreationListTableViewCell.swift */; };
-		BBC01C2A2B51E4B9006D734B /* UserCreationListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBC01C282B51E4B9006D734B /* UserCreationListTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +56,13 @@
 /* Begin PBXFileReference section */
 		BB222A482B58374A006D5DC4 /* DummyBackend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyBackend.swift; sourceTree = "<group>"; };
 		BB222A4B2B583F63006D5DC4 /* OnboardingQuestionsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingQuestionsAPI.swift; sourceTree = "<group>"; };
+		BB222A4F2B640B88006D5DC4 /* OnboardingUserCreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingUserCreationViewController.swift; sourceTree = "<group>"; };
+		BB222A502B640B88006D5DC4 /* OnboardingUserCreationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingUserCreationViewController.xib; sourceTree = "<group>"; };
+		BB222A532B641752006D5DC4 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		BB222A552B642A7E006D5DC4 /* OnboardingUserPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingUserPasswordViewController.swift; sourceTree = "<group>"; };
+		BB222A562B642A7E006D5DC4 /* OnboardingUserPasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingUserPasswordViewController.xib; sourceTree = "<group>"; };
+		BB222A592B6434C1006D5DC4 /* OnboardingAdoptiveParentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingAdoptiveParentViewController.swift; sourceTree = "<group>"; };
+		BB222A5A2B6434C1006D5DC4 /* OnboardingAdoptiveParentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingAdoptiveParentViewController.xib; sourceTree = "<group>"; };
 		BB25233E2B4F4047000E75A5 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		BB25233F2B4F4047000E75A5 /* OnboardingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingViewController.xib; sourceTree = "<group>"; };
 		BB2523462B5060A2000E75A5 /* OnboardingAccountTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingAccountTypeViewController.swift; sourceTree = "<group>"; };
@@ -78,15 +84,7 @@
 		BB6E71312B4E2A1C00F13459 /* GraftUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraftUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		BB6E713F2B4E361600F13459 /* GraftTabBarControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraftTabBarControllerViewController.swift; sourceTree = "<group>"; };
 		BB6E71402B4E361600F13459 /* GraftTabBarControllerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GraftTabBarControllerViewController.xib; sourceTree = "<group>"; };
-		BBC01C182B51C5E9006D734B /* OnboardingUserCreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingUserCreationViewController.swift; sourceTree = "<group>"; };
-		BBC01C192B51C5E9006D734B /* OnboardingUserCreationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingUserCreationViewController.xib; sourceTree = "<group>"; };
-		BBC01C1C2B51C8B0006D734B /* UserCreationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCreationTableViewCell.swift; sourceTree = "<group>"; };
-		BBC01C1D2B51C8B0006D734B /* UserCreationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCreationTableViewCell.xib; sourceTree = "<group>"; };
 		BBC01C202B51D15F006D734B /* SocialModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialModels.swift; sourceTree = "<group>"; };
-		BBC01C232B51E4A6006D734B /* UserCreationSwitchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCreationSwitchTableViewCell.swift; sourceTree = "<group>"; };
-		BBC01C242B51E4A6006D734B /* UserCreationSwitchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCreationSwitchTableViewCell.xib; sourceTree = "<group>"; };
-		BBC01C272B51E4B9006D734B /* UserCreationListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCreationListTableViewCell.swift; sourceTree = "<group>"; };
-		BBC01C282B51E4B9006D734B /* UserCreationListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCreationListTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,13 +123,16 @@
 		BB2523392B4F3D61000E75A5 /* CreateAccount */ = {
 			isa = PBXGroup;
 			children = (
-				BBC01C222B51E48B006D734B /* Cells */,
 				BB25233E2B4F4047000E75A5 /* OnboardingViewController.swift */,
 				BB25233F2B4F4047000E75A5 /* OnboardingViewController.xib */,
 				BB2523462B5060A2000E75A5 /* OnboardingAccountTypeViewController.swift */,
 				BB2523472B5060A2000E75A5 /* OnboardingAccountTypeViewController.xib */,
-				BBC01C182B51C5E9006D734B /* OnboardingUserCreationViewController.swift */,
-				BBC01C192B51C5E9006D734B /* OnboardingUserCreationViewController.xib */,
+				BB222A4F2B640B88006D5DC4 /* OnboardingUserCreationViewController.swift */,
+				BB222A502B640B88006D5DC4 /* OnboardingUserCreationViewController.xib */,
+				BB222A552B642A7E006D5DC4 /* OnboardingUserPasswordViewController.swift */,
+				BB222A562B642A7E006D5DC4 /* OnboardingUserPasswordViewController.xib */,
+				BB222A592B6434C1006D5DC4 /* OnboardingAdoptiveParentViewController.swift */,
+				BB222A5A2B6434C1006D5DC4 /* OnboardingAdoptiveParentViewController.xib */,
 			);
 			path = CreateAccount;
 			sourceTree = "<group>";
@@ -181,6 +182,7 @@
 				BB6E711C2B4E2A1C00F13459 /* Info.plist */,
 				BB25234D2B518065000E75A5 /* Quicksand */,
 				BB222A482B58374A006D5DC4 /* DummyBackend.swift */,
+				BB222A532B641752006D5DC4 /* Extensions.swift */,
 			);
 			path = Graft;
 			sourceTree = "<group>";
@@ -209,19 +211,6 @@
 				BB6E71402B4E361600F13459 /* GraftTabBarControllerViewController.xib */,
 			);
 			path = GraftTabBar;
-			sourceTree = "<group>";
-		};
-		BBC01C222B51E48B006D734B /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				BBC01C1C2B51C8B0006D734B /* UserCreationTableViewCell.swift */,
-				BBC01C1D2B51C8B0006D734B /* UserCreationTableViewCell.xib */,
-				BBC01C232B51E4A6006D734B /* UserCreationSwitchTableViewCell.swift */,
-				BBC01C242B51E4A6006D734B /* UserCreationSwitchTableViewCell.xib */,
-				BBC01C272B51E4B9006D734B /* UserCreationListTableViewCell.swift */,
-				BBC01C282B51E4B9006D734B /* UserCreationListTableViewCell.xib */,
-			);
-			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -329,16 +318,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB6E711B2B4E2A1C00F13459 /* LaunchScreen.storyboard in Resources */,
+				BB222A522B640B88006D5DC4 /* OnboardingUserCreationViewController.xib in Resources */,
 				BB6E71182B4E2A1C00F13459 /* Assets.xcassets in Resources */,
+				BB222A582B642A7E006D5DC4 /* OnboardingUserPasswordViewController.xib in Resources */,
 				BB2523412B4F4047000E75A5 /* OnboardingViewController.xib in Resources */,
-				BBC01C262B51E4A6006D734B /* UserCreationSwitchTableViewCell.xib in Resources */,
 				BB25234E2B518065000E75A5 /* Quicksand in Resources */,
 				BB6E71162B4E2A1A00F13459 /* Main.storyboard in Resources */,
-				BBC01C1F2B51C8B0006D734B /* UserCreationTableViewCell.xib in Resources */,
 				BB6E71422B4E361600F13459 /* GraftTabBarControllerViewController.xib in Resources */,
 				BB2523492B5060A2000E75A5 /* OnboardingAccountTypeViewController.xib in Resources */,
-				BBC01C2A2B51E4B9006D734B /* UserCreationListTableViewCell.xib in Resources */,
-				BBC01C1B2B51C5EA006D734B /* OnboardingUserCreationViewController.xib in Resources */,
+				BB222A5C2B6434C1006D5DC4 /* OnboardingAdoptiveParentViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,18 +351,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BBC01C252B51E4A6006D734B /* UserCreationSwitchTableViewCell.swift in Sources */,
 				BB6E71132B4E2A1A00F13459 /* ViewController.swift in Sources */,
 				BB25234C2B506160000E75A5 /* UserModels.swift in Sources */,
 				BB2523482B5060A2000E75A5 /* OnboardingAccountTypeViewController.swift in Sources */,
-				BBC01C1A2B51C5EA006D734B /* OnboardingUserCreationViewController.swift in Sources */,
-				BBC01C292B51E4B9006D734B /* UserCreationListTableViewCell.swift in Sources */,
 				BB6E710F2B4E2A1A00F13459 /* AppDelegate.swift in Sources */,
 				BB2523402B4F4047000E75A5 /* OnboardingViewController.swift in Sources */,
 				BB222A492B58374A006D5DC4 /* DummyBackend.swift in Sources */,
 				BBC01C212B51D15F006D734B /* SocialModels.swift in Sources */,
+				BB222A572B642A7E006D5DC4 /* OnboardingUserPasswordViewController.swift in Sources */,
 				BB6E71112B4E2A1A00F13459 /* SceneDelegate.swift in Sources */,
-				BBC01C1E2B51C8B0006D734B /* UserCreationTableViewCell.swift in Sources */,
+				BB222A542B641752006D5DC4 /* Extensions.swift in Sources */,
+				BB222A512B640B88006D5DC4 /* OnboardingUserCreationViewController.swift in Sources */,
+				BB222A5B2B6434C1006D5DC4 /* OnboardingAdoptiveParentViewController.swift in Sources */,
 				BB6E71412B4E361600F13459 /* GraftTabBarControllerViewController.swift in Sources */,
 				BB222A4C2B583F63006D5DC4 /* OnboardingQuestionsAPI.swift in Sources */,
 			);

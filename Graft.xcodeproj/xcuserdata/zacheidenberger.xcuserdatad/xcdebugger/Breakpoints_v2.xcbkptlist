@@ -7,62 +7,45 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "63AD1D4A-45D3-4D25-A5B3-E6DAB5F59FDC"
+            uuid = "C4184F1A-DF83-4E7F-AC23-9633FA339B1B"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Graft/CreateAccount/OnboardingAccountTypeViewController.swift"
+            filePath = "Graft/CreateAccount/OnboardingUserCreationViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
-            landmarkName = "adjustUIForSelection()"
-            landmarkType = "7">
+            startingLineNumber = "94"
+            endingLineNumber = "94">
             <Locations>
                <Location
-                  uuid = "63AD1D4A-45D3-4D25-A5B3-E6DAB5F59FDC - 636929a13d4260cb"
+                  uuid = "C4184F1A-DF83-4E7F-AC23-9633FA339B1B - 80bae571c089672f"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Graft.OnboardingAccountTypeViewController.adjustUIForSelection() -&gt; ()"
+                  symbolName = "Graft.OnboardingUserCreationViewController.getCellForQuestionType(onboardingQuestion: Graft.OnboardingQuestion, indexPath: Foundation.IndexPath) -&gt; __C.UITableViewCell"
                   moduleName = "Graft"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/zacheidenberger/Documents/Graft/Graft/CreateAccount/OnboardingAccountTypeViewController.swift"
+                  urlString = "file:///Users/zacheidenberger/Documents/Graft/Graft/CreateAccount/OnboardingUserCreationViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "70"
-                  endingLineNumber = "70"
-                  offsetFromSymbolStart = "692">
+                  startingLineNumber = "82"
+                  endingLineNumber = "82"
+                  offsetFromSymbolStart = "1172">
                </Location>
                <Location
-                  uuid = "63AD1D4A-45D3-4D25-A5B3-E6DAB5F59FDC - 636929a13d4260cb"
+                  uuid = "C4184F1A-DF83-4E7F-AC23-9633FA339B1B - 80bae571c089669b"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Graft.OnboardingAccountTypeViewController.adjustUIForSelection() -&gt; ()"
+                  symbolName = "Graft.OnboardingUserCreationViewController.getCellForQuestionType(onboardingQuestion: Graft.OnboardingQuestion, indexPath: Foundation.IndexPath) -&gt; __C.UITableViewCell"
                   moduleName = "Graft"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/zacheidenberger/Documents/Graft/Graft/CreateAccount/OnboardingAccountTypeViewController.swift"
+                  urlString = "file:///Users/zacheidenberger/Documents/Graft/Graft/CreateAccount/OnboardingUserCreationViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "70"
-                  endingLineNumber = "70"
-                  offsetFromSymbolStart = "772">
-               </Location>
-               <Location
-                  uuid = "63AD1D4A-45D3-4D25-A5B3-E6DAB5F59FDC - 636929a13d4260cb"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Graft.OnboardingAccountTypeViewController.adjustUIForSelection() -&gt; ()"
-                  moduleName = "Graft"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/zacheidenberger/Documents/Graft/Graft/CreateAccount/OnboardingAccountTypeViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "70"
-                  endingLineNumber = "70"
-                  offsetFromSymbolStart = "92">
+                  startingLineNumber = "94"
+                  endingLineNumber = "94"
+                  offsetFromSymbolStart = "428">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -70,17 +53,63 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "2013D0DE-1BE4-47F1-8CD4-0D8FD4C0CCEA"
+            uuid = "159235AB-6BE1-4A41-9673-4D4E5EEEE830"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Graft/CreateAccount/OnboardingAccountTypeViewController.swift"
+            filePath = "Graft/CreateAccount/OnboardingUserCreationViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
-            landmarkName = "currentAccountType"
-            landmarkType = "24">
+            startingLineNumber = "98"
+            endingLineNumber = "98">
+            <Locations>
+               <Location
+                  uuid = "159235AB-6BE1-4A41-9673-4D4E5EEEE830 - 80bae571c0896793"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Graft.OnboardingUserCreationViewController.getCellForQuestionType(onboardingQuestion: Graft.OnboardingQuestion, indexPath: Foundation.IndexPath) -&gt; __C.UITableViewCell"
+                  moduleName = "Graft"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zacheidenberger/Documents/Graft/Graft/CreateAccount/OnboardingUserCreationViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "86"
+                  endingLineNumber = "86"
+                  offsetFromSymbolStart = "2128">
+               </Location>
+               <Location
+                  uuid = "159235AB-6BE1-4A41-9673-4D4E5EEEE830 - 80bae571c089651f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Graft.OnboardingUserCreationViewController.getCellForQuestionType(onboardingQuestion: Graft.OnboardingQuestion, indexPath: Foundation.IndexPath) -&gt; __C.UITableViewCell"
+                  moduleName = "Graft"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zacheidenberger/Documents/Graft/Graft/CreateAccount/OnboardingUserCreationViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "98"
+                  endingLineNumber = "98"
+                  offsetFromSymbolStart = "1172">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "378FBC2C-C2F4-40D7-9496-3F0E657BD407"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Graft/CreateAccount/OnboardingUserCreationViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
+            landmarkName = "nextButtonTapped(_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

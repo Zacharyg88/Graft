@@ -2,109 +2,80 @@
 //  OnboardingUserCreationViewController.swift
 //  Graft
 //
-//  Created by Zach Eidenberger on 1/12/24.
+//  Created by Zach Eidenberger on 1/26/24.
 //
 
 import UIKit
-var backend = DummyBackend()
 
-class OnboardingUserCreationViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, QuestionCellDelegate {
-
-    @IBOutlet weak var questionsTableView: UITableView?
+class OnboardingUserCreationViewController: UIViewController {
     
+    
+    @IBOutlet weak var firstNameTextField: UITextField!
+    @IBOutlet weak var lastNameTextField: UITextField!
+    @IBOutlet weak var birthdayTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var stateTextField: UITextField!
+    @IBOutlet weak var nextButton: UIButton!
+    
+
     var onboardingUser: UserModel?
-    var isBasicGathering: Bool = true
-    var hasAdoptedBefore: Bool = false
-    
     var delegate: OnboardingDelegate?
-    var onboardingQuestions: OnboardingQuestionResponse? {
-        didSet {
-            questionsTableView?.reloadData()
-        }
-    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        questionsTableView?.delegate = self
-        questionsTableView?.dataSource = self
-        questionsTableView?.register(UINib(nibName: "UserCreationTableViewCell", bundle: nil), forCellReuseIdentifier: "UserCreationTableViewCell")
-        questionsTableView?.register(UINib(nibName: "UserCreationSwitchTableViewCell", bundle: nil), forCellReuseIdentifier: "UserCreationSwitchTableViewCell")
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var question: OnboardingQuestion?
-        if isBasicGathering {
-            question = onboardingQuestions?.basicEntryQuestions?[indexPath.row]
-        }else {
-            switch onboardingUser?.accountType {
-            case .AdoptiveParent:
-                question = onboardingQuestions?.advancedEntryQuestions?.adoptiveParentQuestions[indexPath.row]
-            case .ExpectantParent:
-                question = onboardingQuestions?.advancedEntryQuestions?.expectantParentQuestions[indexPath.row]
-            case .ProfessionalAdvisor:
-                question = onboardingQuestions?.advancedEntryQuestions?.counselorQuestions[indexPath.row]
-            default:
-                question = onboardingQuestions?.advancedEntryQuestions?.legalCounselQuestions[indexPath.row]
-            }
-        }
-        
-        let cell = getCellForQuestionType(onboardingQuestion: question ?? OnboardingQuestion(), indexPath: indexPath)
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if isBasicGathering {
-            return onboardingQuestions?.basicEntryQuestions?.count ?? 0
-        }else {
-            switch onboardingUser?.accountType {
-            case .AdoptiveParent:
-                return onboardingQuestions?.advancedEntryQuestions?.adoptiveParentQuestions.count ?? 0
-            case .ExpectantParent:
-                return onboardingQuestions?.advancedEntryQuestions?.expectantParentQuestions.count ?? 0
-            case .ProfessionalAdvisor:
-                return onboardingQuestions?.advancedEntryQuestions?.counselorQuestions.count ?? 0
-            case .LegalCounsel:
-                return onboardingQuestions?.advancedEntryQuestions?.legalCounselQuestions.count ?? 0
-            default:
-                return 0
-            }
-        }
+        firstNameTextField.tag = 0
+        firstNameTextField.addTarget(self, action:#selector(textFieldDidChange(_ : )) , for: .editingChanged)
+        lastNameTextField.tag = 1
+        lastNameTextField.addTarget(self, action:#selector(textFieldDidChange(_ : )) , for: .editingChanged)
+        birthdayTextField.tag = 2
+        birthdayTextField.addTarget(self, action:#selector(textFieldDidChange(_ : )) , for: .editingChanged)
+        emailTextField.tag = 3
+        emailTextField.addTarget(self, action:#selector(textFieldDidChange(_ : )) , for: .editingChanged)
+        stateTextField.tag = 4
+        stateTextField.addTarget(self, action:#selector(textFieldDidChange(_ : )) , for: .editingChanged)
+        nextButton.isEnabled = false
+        nextButton.alpha = 0.35
     }
     
     
-    func getCellForQuestionType(onboardingQuestion: OnboardingQuestion, indexPath: IndexPath) -> UITableViewCell {
-        switch onboardingQuestion.questionType {
-        case "Text":
-            if let cell: UserCreationTableViewCell = self.questionsTableView?.dequeueReusableCell(withIdentifier: "UserCreationTableViewCell", for: indexPath) as? UserCreationTableViewCell {
-                cell.delegate = self
-                
-                return cell
-            }
-        case "Selection":
-            if let cell: UserCreationTableViewCell = self.questionsTableView?.dequeueReusableCell(withIdentifier: "UserCreationTableViewCell", for: indexPath) as? UserCreationTableViewCell {
-                return cell
-            }
-        case "Bool":
-            if let cell: UserCreationSwitchTableViewCell = self.questionsTableView?.dequeueReusableCell(withIdentifier: "UserCreationSwitchTableViewCell", for: indexPath) as? UserCreationSwitchTableViewCell {
-                return cell
-            }
-        case "Int":
-            if let cell: UserCreationTableViewCell = self.questionsTableView?.dequeueReusableCell(withIdentifier: "UserCreationTableViewCell", for: indexPath) as? UserCreationTableViewCell {
-                return cell
-            }
+    @objc func textFieldDidChange(_ textField: UITextField) {
+        switch textField.tag {
+        case 0:
+            onboardingUser?.firstName = textField.text
+        case 1:
+            onboardingUser?.lastName = textField.text
+        case 2:
+            onboardingUser?.birthday = textField.text
+        case 3:
+            onboardingUser?.email = textField.text
         default:
-            return UITableViewCell()
+            onboardingUser?.address = textField.text
         }
-        return UITableViewCell()
+        delegate?.updateNewUserInformation(user: self.onboardingUser ?? UserModel())
+        checkAnswersForButtonFunctionality()
     }
     
-    func didUpdateAnswer(id: String, boolAnswer: Bool?, stringAnswer: String?, intAnswer: Int?) {
-        print(id, boolAnswer, stringAnswer, intAnswer)
+    func checkAnswersForButtonFunctionality() {
+        let isValidEmail = onboardingUser?.email?.isValidEmail() ?? false
+        print(onboardingUser, isValidEmail)
+        if let user = onboardingUser {
+            if user.firstName != nil && user.lastName != nil && user.birthday != nil && isValidEmail && user.address != nil {
+                nextButton.alpha = 1
+                nextButton.isEnabled = true
+            }else {
+                nextButton.isEnabled = false
+                nextButton.alpha = 0.35
+
+            }
+        }
     }
     
+    @IBAction func nextButtonTapped(_ sender: Any) {
+        delegate?.didTapNext()
+    }
     
-
-}
-
-protocol QuestionCellDelegate {
-    func didUpdateAnswer(id: String, boolAnswer: Bool?, stringAnswer: String?, intAnswer: Int?)
+    @IBAction func backButtonTapped(_ sender: Any) {
+        delegate?.didTapBack()
+    }
+    
 }

@@ -23,17 +23,41 @@ class OnboardingViewController: UIViewController, UIPageViewControllerDelegate, 
     var allSteps: [OnboardingStep] = [.AccountType, .UserCreation, .EmailPassword, .PhoneInput, .PhoneVerification]
     var newUser: UserModel?
     var pageViewController: UIPageViewController?
-    var viewControllers: [UIViewController] = [OnboardingAccountTypeViewController(), OnboardingUserCreationViewController()]
+    var viewControllers: [UIViewController] = []
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         newUser = UserModel()
+        
+        var frame = CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height)
+        
+        var accountTypeViewController: OnboardingAccountTypeViewController = OnboardingAccountTypeViewController()
+        accountTypeViewController.onboardingUser = newUser
+        accountTypeViewController.delegate = self
+        accountTypeViewController.view.frame = frame
+        
+        var newUserViewController: OnboardingUserCreationViewController = OnboardingUserCreationViewController()
+        newUserViewController.onboardingUser = newUser
+        newUserViewController.delegate = self
+        newUserViewController.view.frame = frame
+        
+        var newUserUsernameController: OnboardingUserPasswordViewController = OnboardingUserPasswordViewController()
+        newUserUsernameController.onboardingUser = newUser
+        newUserUsernameController.delegate = self
+        newUserUsernameController.view.frame = frame
+        
+        viewControllers.append(accountTypeViewController)
+        viewControllers.append(newUserViewController)
+        //Placeholder for advanced information gathering stage
+        viewControllers.append(UIViewController())
+        viewControllers.append(newUserUsernameController)
+        
         var pageVC = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
         pageVC.dataSource = self
         pageVC.delegate = self
         pageVC.setViewControllers([viewControllers.first ?? UIViewController()], direction: .forward, animated: true, completion: nil)
-        pageVC.view.frame = CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height)
+        pageVC.view.frame = CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height + 64)
         self.pageViewController = pageVC
         
         addChild(self.pageViewController ?? UIViewController())
@@ -54,28 +78,43 @@ class OnboardingViewController: UIViewController, UIPageViewControllerDelegate, 
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-        if currentOnboardingStep == .AccountType {
-            return nil
-        }else {
-            return getViewControllerForOnboardingStep(step: currentOnboardingStep.rawValue - 1)
-        }
+        return nil
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-        if currentOnboardingStep == .PhoneVerification {
-            return nil
-        }else {
-            return getViewControllerForOnboardingStep(step: currentOnboardingStep.rawValue + 1)
-        }
+        return nil
     }
     
     func didTapBack() {
-        currentOnboardingStep = allSteps[currentOnboardingStep.rawValue - 1]
+        let currentIndex = self.currentOnboardingStep.rawValue
+        currentOnboardingStep = allSteps[currentIndex - 1]
+        pageViewController?.setViewControllers([getViewControllerForIndex(index: currentIndex)], direction: .reverse, animated: true)
         
     }
     
     func didTapNext() {
-        currentOnboardingStep = allSteps[currentOnboardingStep.rawValue + 1]
+        let currentIndex = self.currentOnboardingStep.rawValue
+        currentOnboardingStep = allSteps[currentIndex + 1]
+        pageViewController?.setViewControllers([getViewControllerForIndex(index: currentOnboardingStep.rawValue)], direction: .forward, animated: true)
+
+    }
+    
+    func getViewControllerForIndex(index: Int) -> UIViewController {
+        switch index {
+        case 2:
+            switch newUser?.accountType {
+            case .AdoptiveParent:
+                var adoptiveParentController: OnboardingAdoptiveParentViewController = OnboardingAdoptiveParentViewController()
+                adoptiveParentController.onboardingUser = newUser
+                adoptiveParentController.delegate = self
+                adoptiveParentController.view.frame = self.view.frame
+                return adoptiveParentController
+            default:
+                return UIViewController()
+            }
+        default:
+            return viewControllers[index]
+        }
     }
     
     func updateNewUserInformation(user: UserModel) {

@@ -13,6 +13,7 @@ class UserModel: NSObject, Codable {
     var lastName: String?
     var userName: String?
     var email: String?
+    var birthday: String?
     var address: String?
     var phoneNumber: String?
     var biography: String?
@@ -34,8 +35,8 @@ class BusinessObject: NSObject, Codable {
 struct AdoptiveParentOptions: Codable {
     var hasCompletedHomestudy: Bool = false
     var outOfStateOpen: Bool = false
-    var childrenInHome: Int = 0
-    var previousAdoptions: Int = 0
+    var childrenInHome: Int?
+    var previousAdoptions: Int?
 }
 
 struct ExpectantParentOptions: Codable {
@@ -56,8 +57,8 @@ struct CounselorOptions: Codable {
 struct LegalEntityOptions: Codable {
     var firmName: String = ""
     var outOfStateOpen: Bool = false
-    var retainerFee: Int = 0
-    var yearsPracticing: Int = 0
+    var retainerFee: Int? = 0
+    var yearsPracticing: Int? = 0
 }
 
 

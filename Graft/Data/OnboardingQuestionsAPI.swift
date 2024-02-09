@@ -9,6 +9,19 @@ import Foundation
 
 class OnboardingQuestionsAPI: NSObject {
     
+//    func getOnboardingQuestions() -> OnboardingQuestionResponse? {
+//        let encoder = JSONEncoder()
+//        do {
+//            let data = try JSONSerialization.data(withJSONObject: DummyBackend().onboardingQuestions, options: .prettyPrinted)
+//            return convertDataToObject(data: data)
+//                
+//        }catch {
+//            print(error)
+//        }
+//        
+//        return nil
+//    }
+    
     func convertDataToObject(data: Data) -> OnboardingQuestionResponse? {
         var decoder = JSONDecoder()
         do {
