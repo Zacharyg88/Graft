@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Quicksand-Regular.ttf">
+            <string>Quicksand-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -38,6 +45,20 @@
                                                 <action selector="createAccountTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="edD-5h-V3R"/>
                                             </connections>
                                         </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oJO-Lp-t88">
+                                            <rect key="frame" x="159" y="622.66666666666663" width="75" height="35"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="35" id="T2u-Ie-D1A"/>
+                                                <constraint firstAttribute="width" constant="75" id="jz1-Ls-STj"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="16"/>
+                                            <color key="tintColor" name="Gentle Gray"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" title="Log In"/>
+                                            <connections>
+                                                <action selector="loginWithCredentials:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dfo-8M-aPF"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="bottom" secondItem="H8M-u5-hSc" secondAttribute="bottom" constant="24" id="doH-fh-oz9"/>
@@ -61,7 +82,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xxd-br-XuJ">
                                 <rect key="frame" x="24" y="576.66666666666663" width="345" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" textContentType="password"/>
                             </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -70,6 +91,7 @@
                             <constraint firstItem="GYu-jy-Y3q" firstAttribute="centerX" secondItem="2sP-av-Cs1" secondAttribute="centerX" id="2Do-8G-fsb"/>
                             <constraint firstItem="H8M-u5-hSc" firstAttribute="centerX" secondItem="xxd-br-XuJ" secondAttribute="centerX" id="7hK-An-iaS"/>
                             <constraint firstItem="2sP-av-Cs1" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="9xo-cH-QuQ"/>
+                            <constraint firstItem="oJO-Lp-t88" firstAttribute="centerX" secondItem="xxd-br-XuJ" secondAttribute="centerX" id="BNI-Pb-Cci"/>
                             <constraint firstItem="sAe-iC-eOZ" firstAttribute="leading" secondItem="yhB-wD-hdH" secondAttribute="leading" id="CCo-7J-VRB"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GYu-jy-Y3q" secondAttribute="trailing" constant="24" id="G1E-5a-VEc"/>
                             <constraint firstItem="sAe-iC-eOZ" firstAttribute="trailing" secondItem="yhB-wD-hdH" secondAttribute="trailing" id="JSh-6e-DTH"/>
@@ -77,6 +99,7 @@
                             <constraint firstItem="xxd-br-XuJ" firstAttribute="width" secondItem="GYu-jy-Y3q" secondAttribute="width" id="Mng-gp-rUp"/>
                             <constraint firstItem="GYu-jy-Y3q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="RKH-OB-rDW"/>
                             <constraint firstItem="sAe-iC-eOZ" firstAttribute="bottom" secondItem="yhB-wD-hdH" secondAttribute="bottom" id="TzR-kr-5s5"/>
+                            <constraint firstItem="oJO-Lp-t88" firstAttribute="top" secondItem="xxd-br-XuJ" secondAttribute="bottom" constant="12" id="UPn-Rc-0Lj"/>
                             <constraint firstItem="xxd-br-XuJ" firstAttribute="top" secondItem="GYu-jy-Y3q" secondAttribute="bottom" constant="24" id="VTx-Ik-o8n"/>
                             <constraint firstItem="yhB-wD-hdH" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Zzo-34-TnU"/>
                             <constraint firstItem="yhB-wD-hdH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dwE-1x-kNr"/>
@@ -103,6 +126,9 @@
     <resources>
         <image name="icon_sapling" width="32" height="32"/>
         <image name="sapling_blur" width="6000" height="4000"/>
+        <namedColor name="Gentle Gray">
+            <color red="0.69019607843137254" green="0.69019607843137254" blue="0.69019607843137254" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

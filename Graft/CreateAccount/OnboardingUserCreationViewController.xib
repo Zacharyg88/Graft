@@ -4,7 +4,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
-        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -35,43 +34,43 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tell us about yourself" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k0c-at-hx7">
-                    <rect key="frame" x="24.000000000000014" y="83" width="250.33333333333337" height="30"/>
+                    <rect key="frame" x="24.000000000000014" y="95" width="250.33333333333337" height="30"/>
                     <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="24"/>
                     <color key="textColor" name="Deep Forest Green"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Aqd-ID-xt2">
-                    <rect key="frame" x="24" y="137" width="345" height="34"/>
+                    <rect key="frame" x="24" y="149" width="345" height="34"/>
                     <color key="textColor" name="Dark Slate Gray"/>
                     <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="14"/>
                     <textInputTraits key="textInputTraits" textContentType="given-name"/>
                 </textField>
                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="47X-ca-DPg">
-                    <rect key="frame" x="24" y="183" width="345" height="34"/>
+                    <rect key="frame" x="24" y="195" width="345" height="34"/>
                     <color key="textColor" name="Dark Slate Gray"/>
                     <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="14"/>
                     <textInputTraits key="textInputTraits" textContentType="family-name"/>
                 </textField>
                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Birthday" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CuE-aX-V7j">
-                    <rect key="frame" x="24" y="229" width="345" height="34"/>
+                    <rect key="frame" x="24" y="241" width="345" height="34"/>
                     <color key="textColor" name="Dark Slate Gray"/>
                     <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="14"/>
                     <textInputTraits key="textInputTraits" textContentType="bday"/>
                 </textField>
                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rSy-sp-cUl">
-                    <rect key="frame" x="24" y="275" width="345" height="34"/>
+                    <rect key="frame" x="24" y="287" width="345" height="34"/>
                     <color key="textColor" name="Dark Slate Gray"/>
                     <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="14"/>
                     <textInputTraits key="textInputTraits" textContentType="email"/>
                 </textField>
                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="State of Residence" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tMr-GZ-eRO">
-                    <rect key="frame" x="24" y="321" width="345" height="34"/>
+                    <rect key="frame" x="24" y="333" width="345" height="34"/>
                     <color key="textColor" name="Dark Slate Gray"/>
                     <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="14"/>
                     <textInputTraits key="textInputTraits" textContentType="address-level1"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vix-Wv-caC">
-                    <rect key="frame" x="24" y="379" width="345" height="48"/>
+                    <rect key="frame" x="24" y="391" width="345" height="48"/>
                     <color key="backgroundColor" name="Soft Fern"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="48" id="k1e-C7-FvB"/>
@@ -85,17 +84,17 @@
                         <action selector="nextButtonTapped:" destination="-1" eventType="touchUpInside" id="LaN-uh-3B7"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vxW-7z-i2I">
-                    <rect key="frame" x="24" y="47" width="24" height="24"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vxW-7z-i2I">
+                    <rect key="frame" x="24" y="455" width="345" height="24"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="24" id="N23-px-3fd"/>
-                        <constraint firstAttribute="width" constant="24" id="T1e-qV-crA"/>
                     </constraints>
+                    <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="16"/>
                     <color key="tintColor" name="Deep Forest Green"/>
-                    <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain">
-                        <imageReference key="image" image="chevron.left" catalog="system" symbolScale="small"/>
-                    </buttonConfiguration>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Back">
+                        <color key="titleColor" name="Gentle Gray"/>
+                    </state>
                     <connections>
                         <action selector="backButtonTapped:" destination="-1" eventType="touchUpInside" id="AUW-aB-CZb"/>
                     </connections>
@@ -120,23 +119,26 @@
                 <constraint firstItem="CuE-aX-V7j" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="dJx-1Z-Onq"/>
                 <constraint firstItem="47X-ca-DPg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="ef4-fu-U3s"/>
                 <constraint firstItem="Aqd-ID-xt2" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="eof-J3-7bp"/>
-                <constraint firstItem="k0c-at-hx7" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="24" id="j9G-in-iIm"/>
+                <constraint firstItem="k0c-at-hx7" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="36" id="hE5-Hb-vsn"/>
                 <constraint firstItem="tMr-GZ-eRO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="mAh-zO-xEC"/>
                 <constraint firstItem="rSy-sp-cUl" firstAttribute="top" secondItem="CuE-aX-V7j" secondAttribute="bottom" constant="12" id="raV-Of-ADy"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="vxW-7z-i2I" secondAttribute="trailing" constant="24" id="ru0-vq-dqJ"/>
+                <constraint firstItem="vix-Wv-caC" firstAttribute="bottom" secondItem="vxW-7z-i2I" secondAttribute="top" constant="-16" id="x3d-Bs-vAW"/>
                 <constraint firstItem="47X-ca-DPg" firstAttribute="top" secondItem="Aqd-ID-xt2" secondAttribute="bottom" constant="12" id="yPW-eg-TE6"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="rSy-sp-cUl" secondAttribute="trailing" constant="24" id="yxq-7V-Cj5"/>
-                <constraint firstItem="k0c-at-hx7" firstAttribute="top" secondItem="vxW-7z-i2I" secondAttribute="bottom" constant="12" id="z43-Vb-Cvd"/>
             </constraints>
             <point key="canvasLocation" x="26" y="-11"/>
         </view>
     </objects>
     <resources>
-        <image name="chevron.left" catalog="system" width="97" height="128"/>
         <namedColor name="Dark Slate Gray">
             <color red="0.34901960784313724" green="0.34901960784313724" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Deep Forest Green">
             <color red="0.0" green="0.30196078431372547" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Gentle Gray">
+            <color red="0.69019607843137254" green="0.69019607843137254" blue="0.69019607843137254" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Soft Fern">
             <color red="0.70980392156862748" green="0.80000000000000004" blue="0.58039215686274515" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

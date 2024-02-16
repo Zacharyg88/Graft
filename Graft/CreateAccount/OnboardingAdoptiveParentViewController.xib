@@ -4,7 +4,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
-        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="UIMenu" message="Requires Xcode 11 or later." minToolsVersion="11.0" requiredIntegratedClassName="UICommandDiff"/>
@@ -36,25 +35,25 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Congrats! Tell us a little more about yourself!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lmU-yN-F8x">
-                    <rect key="frame" x="24" y="83" width="345" height="42.666666666666657"/>
+                    <rect key="frame" x="24" y="105.33333333333333" width="345" height="42.666666666666671"/>
                     <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="17"/>
                     <color key="textColor" name="Deep Forest Green"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Have you completed your Home Study?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZdU-Gb-0SS">
-                    <rect key="frame" x="24" y="149.66666666666666" width="296" height="20"/>
+                    <rect key="frame" x="24" y="172" width="296" height="20"/>
                     <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="16"/>
                     <color key="textColor" name="Dark Slate Gray"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you open to an out-of-state match?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jYw-WD-d3K">
-                    <rect key="frame" x="24" y="236.66666666666666" width="294.66666666666669" height="19.999999999999972"/>
+                    <rect key="frame" x="24" y="259" width="294.66666666666669" height="20"/>
                     <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="16"/>
                     <color key="textColor" name="Dark Slate Gray"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Vi6-gX-52z">
-                    <rect key="frame" x="24" y="181.66666666666666" width="81" height="32"/>
+                    <rect key="frame" x="24" y="204" width="81" height="32"/>
                     <segments>
                         <segment title="Yes"/>
                         <segment title="No"/>
@@ -65,7 +64,7 @@
                     </connections>
                 </segmentedControl>
                 <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="fYZ-TV-M7f">
-                    <rect key="frame" x="24" y="268.66666666666669" width="81" height="32"/>
+                    <rect key="frame" x="24" y="291" width="81" height="32"/>
                     <segments>
                         <segment title="Yes"/>
                         <segment title="No"/>
@@ -76,19 +75,19 @@
                     </connections>
                 </segmentedControl>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How many children do you have at home?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xa1-KW-mOH">
-                    <rect key="frame" x="24" y="323.66666666666669" width="313" height="20"/>
+                    <rect key="frame" x="24" y="346" width="313" height="20"/>
                     <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="16"/>
                     <color key="textColor" name="Dark Slate Gray"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How many previous adoptions have you completed?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6dU-Wa-zLY">
-                    <rect key="frame" x="24" y="411.66666666666669" width="345" height="40"/>
+                    <rect key="frame" x="24" y="434" width="345" height="40"/>
                     <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="16"/>
                     <color key="textColor" name="Dark Slate Gray"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L0a-5y-5Y6" userLabel="Children Selection">
-                    <rect key="frame" x="24" y="355.66666666666669" width="30" height="32"/>
+                    <rect key="frame" x="24" y="378" width="30" height="32"/>
                     <color key="backgroundColor" name="Dark Slate Gray"/>
                     <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="16"/>
                     <color key="tintColor" name="Lush Meadow"/>
@@ -109,7 +108,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vMa-wq-h3V" userLabel="Previous Adoptions Selection">
-                    <rect key="frame" x="24" y="463.66666666666669" width="30" height="32"/>
+                    <rect key="frame" x="24" y="486" width="30" height="32"/>
                     <color key="backgroundColor" name="Dark Slate Gray"/>
                     <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="16"/>
                     <color key="tintColor" name="Lush Meadow"/>
@@ -130,7 +129,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kz7-8O-Io4">
-                    <rect key="frame" x="24" y="519.66666666666663" width="345" height="48"/>
+                    <rect key="frame" x="24" y="542" width="345" height="48"/>
                     <color key="backgroundColor" name="Soft Fern"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="48" id="JYs-eV-8By"/>
@@ -144,13 +143,17 @@
                         <action selector="nextButtonTapped:" destination="-1" eventType="touchUpInside" id="y6z-r5-VJL"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fkd-7A-WbA">
-                    <rect key="frame" x="12" y="36.666666666666657" width="33.666666666666664" height="34.333333333333343"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fkd-7A-WbA">
+                    <rect key="frame" x="24" y="606" width="345" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="24" id="yXR-Ym-e39"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="16"/>
                     <color key="tintColor" name="Deep Forest Green"/>
-                    <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain">
-                        <imageReference key="image" image="chevron.left" catalog="system" symbolScale="small"/>
-                    </buttonConfiguration>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Back">
+                        <color key="titleColor" name="Gentle Gray"/>
+                    </state>
                     <connections>
                         <action selector="backButtonTapped:" destination="-1" eventType="touchUpInside" id="DKZ-2V-BzN"/>
                     </connections>
@@ -164,15 +167,15 @@
                 <constraint firstItem="Kz7-8O-Io4" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="Ahd-WA-8zm"/>
                 <constraint firstItem="Kz7-8O-Io4" firstAttribute="top" secondItem="vMa-wq-h3V" secondAttribute="bottom" constant="24" id="Dle-BX-FYa"/>
                 <constraint firstItem="xa1-KW-mOH" firstAttribute="top" secondItem="fYZ-TV-M7f" secondAttribute="bottom" constant="24" id="FE1-ah-dXF"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="fkd-7A-WbA" secondAttribute="trailing" constant="24" id="GWE-2h-HBO"/>
                 <constraint firstItem="Vi6-gX-52z" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="GjD-6E-uSy"/>
-                <constraint firstItem="lmU-yN-F8x" firstAttribute="top" secondItem="fkd-7A-WbA" secondAttribute="bottom" constant="12" id="IGg-sQ-EZv"/>
                 <constraint firstItem="L0a-5y-5Y6" firstAttribute="top" secondItem="xa1-KW-mOH" secondAttribute="bottom" constant="12" id="NDi-Wr-D3n"/>
                 <constraint firstItem="6dU-Wa-zLY" firstAttribute="top" secondItem="L0a-5y-5Y6" secondAttribute="bottom" constant="24" id="R3X-Aq-gsP"/>
                 <constraint firstItem="jYw-WD-d3K" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="Sr9-7Y-HpR"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="lmU-yN-F8x" secondAttribute="trailing" constant="24" id="U9s-1Y-8ym"/>
-                <constraint firstItem="fkd-7A-WbA" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="12" id="UxO-bp-s2j"/>
+                <constraint firstItem="fkd-7A-WbA" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="UxO-bp-s2j"/>
                 <constraint firstItem="lmU-yN-F8x" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="X3C-Ul-9qn"/>
-                <constraint firstItem="lmU-yN-F8x" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="24" id="XZ9-QI-oKG"/>
+                <constraint firstItem="Kz7-8O-Io4" firstAttribute="bottom" secondItem="fkd-7A-WbA" secondAttribute="top" constant="-16" id="YVq-9K-60q"/>
                 <constraint firstItem="6dU-Wa-zLY" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="ZIh-rx-GEK"/>
                 <constraint firstAttribute="trailing" secondItem="6dU-Wa-zLY" secondAttribute="trailing" constant="24" id="avQ-KK-zY9"/>
                 <constraint firstItem="Vi6-gX-52z" firstAttribute="top" secondItem="ZdU-Gb-0SS" secondAttribute="bottom" constant="12" id="c65-Ge-NWv"/>
@@ -183,18 +186,21 @@
                 <constraint firstItem="ZdU-Gb-0SS" firstAttribute="top" secondItem="lmU-yN-F8x" secondAttribute="bottom" constant="24" id="qfN-hT-hlg"/>
                 <constraint firstItem="jYw-WD-d3K" firstAttribute="top" secondItem="Vi6-gX-52z" secondAttribute="bottom" constant="24" id="rca-3u-BN5"/>
                 <constraint firstItem="xa1-KW-mOH" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="tZT-MN-Gq1"/>
+                <constraint firstItem="lmU-yN-F8x" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="46.333333333333329" id="v4R-cW-0x1"/>
                 <constraint firstItem="vMa-wq-h3V" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="xw9-HA-yL2"/>
             </constraints>
             <point key="canvasLocation" x="-10" y="-11"/>
         </view>
     </objects>
     <resources>
-        <image name="chevron.left" catalog="system" width="97" height="128"/>
         <namedColor name="Dark Slate Gray">
             <color red="0.34901960784313724" green="0.34901960784313724" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Deep Forest Green">
             <color red="0.0" green="0.30196078431372547" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Gentle Gray">
+            <color red="0.69019607843137254" green="0.69019607843137254" blue="0.69019607843137254" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Golden Glow">
             <color red="1" green="0.84313725490196079" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

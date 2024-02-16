@@ -53,6 +53,15 @@ class ViewController: UIViewController {
             }
         }
     }
+    
+    @IBAction func loginWithCredentials(_ sender: Any) {
+        if emailTextField.text?.isValidEmail() ?? false && passwordTextField.text?.isValidPassword() ?? false {
+            let loginApi = LoginAPI()
+            guard let email  = emailTextField.text else { return }
+            guard let password = passwordTextField.text else { return }
+            let user = loginApi.loginWithCredentials(email: email, password: password)
+        }
+    }
 
     @IBAction func createAccountTapped(_ sender: Any) {
         var onboardingVC = OnboardingViewController()

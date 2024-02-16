@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class OnboardingUserPasswordViewController: UIViewController {
     
@@ -33,11 +34,11 @@ class OnboardingUserPasswordViewController: UIViewController {
         super.viewDidLoad()
         nextButtonIsLocked = true
         usernameTextField.tag = 0
-        usernameTextField.addTarget(self, action: #selector(textFieldDidUpdate(_ : )), for: .editingDidEnd)
+        usernameTextField.addTarget(self, action: #selector(textFieldDidUpdate(_ : )), for: .editingChanged)
         passwordTextField.tag = 1
-        passwordTextField.addTarget(self, action: #selector(textFieldDidUpdate(_ : )), for: .editingDidEnd)
+        passwordTextField.addTarget(self, action: #selector(textFieldDidUpdate(_ : )), for: .editingChanged)
         confirmTextField.tag = 2
-        confirmTextField.addTarget(self, action: #selector(textFieldDidUpdate(_ : )), for: .editingDidEnd)
+        confirmTextField.addTarget(self, action: #selector(textFieldDidUpdate(_ : )), for: .editingChanged)
         
 
     }
@@ -47,7 +48,7 @@ class OnboardingUserPasswordViewController: UIViewController {
         case 0:
             //Async check on valid username required here
             onboardingUser?.userName = textField.text
-        case 2:
+        case 1,2:
             if passwordsMatch() {
              print("Passwords Match!")
                 nextButtonIsLocked = false
@@ -75,7 +76,19 @@ class OnboardingUserPasswordViewController: UIViewController {
     }
     
     @IBAction func nextButtonTapped() {
-        delegate?.didTapNext()
+        DispatchQueue.main.async {
+            Auth.auth().createUser(withEmail: self.onboardingUser?.email ?? "", password: self.passwordTextField.text ?? "") { result, error in
+                if error != nil {
+                    print("there was an error creating the Firebase User", error)
+                }else {
+                    guard let user = result?.user else { return }
+                    let userApi = UserAPI()
+                    var newUser = userApi.createUser(id: user.uid, username: self.usernameTextField.text ?? "", password: self.passwordTextField.text ?? "", firstName: self.onboardingUser?.firstName ?? "", lastName: self.onboardingUser?.lastName ?? "", birthday: self.onboardingUser?.birthday ?? "", address: self.onboardingUser?.address ?? "", phoneNumber: self.onboardingUser?.phoneNumber ?? "", biography: self.onboardingUser?.biography ?? "")
+                    print(newUser)
+                }
+            }
+        }
+        //delegate?.didTapNext()
     }
     @IBAction func backButtonTapped(_ sender: Any) {
         delegate?.didTapBack()

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 protocol OnboardingDelegate {
     func didTapNext()
@@ -30,7 +31,7 @@ class OnboardingViewController: UIViewController, UIPageViewControllerDelegate, 
         super.viewDidLoad()
         newUser = UserModel()
         
-        var frame = CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height)
+        var frame = CGRect(x: 0, y: 64, width: self.view.frame.width, height: self.view.frame.height)
         
         var accountTypeViewController: OnboardingAccountTypeViewController = OnboardingAccountTypeViewController()
         accountTypeViewController.onboardingUser = newUser
